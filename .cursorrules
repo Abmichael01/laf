@@ -1,0 +1,20 @@
+# Lost and Found Site - Frontend Development Rules
+
+## Component Organization
+- **Never use "use client" in a page component**. If client-side functionality is needed, create a `pageClient.tsx` file in the same folder as the page.
+- Group components used in each page similar to how app routes work (folder-based organization).
+
+## Styling & UI Components
+- We are using **shadcn** and will depend on it heavily.
+- If custom styling is needed, **edit the shadcn components directly** rather than creating separate styled components.
+- Use a **fancy scrollbar throughout** - never use the browser default scrollbar.
+
+## TypeScript & Code Quality
+- **Always run `pnpm tsc --noEmit`** to check for TypeScript errors before finalizing code changes.
+
+## Data Structure
+- When building the frontend, use **real data structures** - meaning how the data will actually look after backend integration. Don't use placeholder or mock data structures that won't match the final API.
+
+## Library Usage
+- When asked for a solution to something, **always check if a React library handles it already** instead of building from scratch. Prefer existing, well-maintained libraries over custom implementations.
+
